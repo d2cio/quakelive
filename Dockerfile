@@ -13,8 +13,9 @@ RUN rm -f steamcmd_linux.tar.gz
 # install the quake live server program
 RUN /home/steamcmd.sh +login anonymous +force_install_dir /home/steamapps/common/qlds/ +app_update 349090 +quit
 
-RUN rm -rf /home/steamapps/common/qlds/baseq3/*.cfg
-RUN rm -rf /home/steamapps/common/qlds/baseq3/*.txt
+RUN mkdir /home/steamapps/common/qlds/baseq3/configs/
+RUN mv /home/steamapps/common/qlds/baseq3/*.cfg /home/steamapps/common/qlds/baseq3/configs/
+RUN mv /home/steamapps/common/qlds/baseq3/*.txt /home/steamapps/common/qlds/baseq3/configs/
 
 #RUN python -m easy_install pyzmq hiredis
 
