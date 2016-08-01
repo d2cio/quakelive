@@ -17,7 +17,7 @@ RUN mkdir /home/steamapps/common/qlds/baseq3/configs/
 RUN mv /home/steamapps/common/qlds/baseq3/*.cfg /home/steamapps/common/qlds/baseq3/configs/
 RUN mv /home/steamapps/common/qlds/baseq3/*.txt /home/steamapps/common/qlds/baseq3/configs/
 
-RUN python -m easy_install pyzmq hiredis
+#RUN python -m easy_install pyzmq hiredis
 
 RUN git clone https://github.com/MinoMino/minqlx-plugins.git /minqlx-plugins
 
